@@ -232,12 +232,6 @@ def p_operation_equals(p):
         names[p[1]] = names[p[1]] * p[3]
         symbol_table[p[1]][5] = names[p[1]]
 
-""" Neha Ghaty's personal problem :)
-        try:
-            names[p[1]] = names[p[1]] * p[3]
-        except KeyError:
-            names[p[1]] = names[p[1]] * names[p[3]]"""
-
 def p_expression_not(p):
     "expression : '!' expression"
     p[0] = not (p[2])
